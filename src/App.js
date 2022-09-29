@@ -10,12 +10,11 @@ function App() {
   const [weather, setWeather] = useState();
   useEffect(() => {
     axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&&appid=0f86c0f97f4a62686b4859344ba72ac1`).then((res) => {
-    console.log(res.data)
+      console.log(res.data);
       setWeather(res.data.weather[0].main);
     });
-  });
+  }, []);
   return (
-    
     <div className="App">
       <div className="container">
         <div className="top">
