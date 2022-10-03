@@ -1,0 +1,92 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  font-size: 15px;
+  color: #fff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+button {
+  border: none;
+  background: none;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}
+
+.container {
+  width: 30vw;
+  height: calc(100vh - 100px);
+  padding: 30px;
+  background-image: url("../../public/images/main-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 350px;
+  border-radius: 25px;
+}
+.container .top {
+  width: 100%;
+  height: 50%;
+}
+.container .top .location {
+  margin-bottom: 30px;
+  text-align: left;
+}
+.container .top .location .material-icons {
+  font-size: 15px;
+}
+.container .top .date {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.container .top .icon {
+  margin-bottom: 15px;
+}
+.container .top .icon img {
+  width: 80%;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 100%;
+  vertical-align: top;
+}
+.container .top .temp {
+  font-size: 36px;
+}
+.container .top .temp h1 {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+}
+.container .top .temp h1:after {
+  content: "°";
+  position: absolute;
+  top: 10px;
+  right: -20px;
+  font-weight: 500;
+  font-size: 38px;
+}
