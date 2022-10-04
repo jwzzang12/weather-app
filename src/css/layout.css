@@ -42,11 +42,12 @@ button {
   width: 30vw;
   height: calc(100vh - 100px);
   padding: 30px;
-  background-image: url("../../public/images/main-bg.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   max-width: 350px;
+  max-height: 650px;
+  min-width: 300px;
   border-radius: 25px;
 }
 .container .top {
@@ -69,9 +70,7 @@ button {
   margin-bottom: 15px;
 }
 .container .top .icon img {
-  width: 80%;
-  background-color: rgba(255, 255, 255, 0.3);
-  border-radius: 100%;
+  width: 70%;
   vertical-align: top;
 }
 .container .top .temp {
@@ -89,4 +88,13 @@ button {
   right: -20px;
   font-weight: 500;
   font-size: 38px;
+}
+
+#footer {
+  width: 100%;
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  padding-bottom: 50px;
+  color: rgba(255, 255, 255, 0.5);
 }
