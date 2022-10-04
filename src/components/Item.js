@@ -24,7 +24,7 @@ export default function Item() {
         if (weatherID < 250) {
           return (bg = "url('../images/thunder.jpg')"), setIcon("thunder.png");
         } else if (weatherID < 350) {
-          return (bg = "url('../images/drizzle.jpg')"), (icon = "drizzle.png"), setIcon("thunder.png");
+          return (bg = "url('../images/drizzle.jpg')"), setIcon("thunder.png");
         } else if (weatherID < 550) {
           return (bg = "url('../images/rain.jpg')"), setIcon("rain.png");
         } else if (weatherID < 650) {
@@ -43,26 +43,24 @@ export default function Item() {
   });
   return (
     <div className="container" id="1">
-      <div className="top">
-        <div className="location">
-          <p>
-            <span className="material-icons">place</span>
-            {name}
-          </p>
-        </div>
-        <div className="date">
-          <Moment format="MMM DD, ddd">{today}</Moment>
-          <Showtime />
-        </div>
-        <div className="icon">
-          <img src={`../images/icons/${icon}`} alt="" />
-        </div>
-        <div className="weather">
-          <p>{weather}</p>
-        </div>
-        <div className="temp">
-          <h1>{Math.round(temp - 273.15)}</h1>
-        </div>
+      <div className="location">
+        <p>
+          <span className="material-icons">place</span>
+          {name}
+        </p>
+      </div>
+      <div className="date">
+        <Moment format="MMM DD, ddd">{today}</Moment>
+        <Showtime />
+      </div>
+      <div className="icon">
+        <img src={`../images/icons/${icon}`} alt="" />
+      </div>
+      <div className="weather">
+        <p>{weather}</p>
+      </div>
+      <div className="temp">
+        <h1>{Math.round(temp - 273.15)}</h1>
       </div>
     </div>
   );

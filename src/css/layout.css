@@ -11,6 +11,9 @@ body {
   font-family: "Quicksand", sans-serif;
   font-size: 15px;
   color: #fff;
+  background: linear-gradient(-45deg, rgba(122, 127, 217, 0.3333333333), rgba(143, 255, 203, 0.3333333333));
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
 }
 
 a {
@@ -49,39 +52,42 @@ button {
   max-height: 650px;
   min-width: 300px;
   border-radius: 25px;
+  -webkit-box-shadow: 0px 0px 15px 0px #000000;
+  box-shadow: 0px 0px 15px 0px #000000;
 }
-.container .top {
-  width: 100%;
-  height: 50%;
-}
-.container .top .location {
+.container .location {
   margin-bottom: 30px;
   text-align: left;
+  background-color: rgba(255, 255, 255, 0.2);
+  width: fit-content;
+  padding: 5px 10px;
+  border-radius: 50px;
 }
-.container .top .location .material-icons {
+.container .location .material-icons {
   font-size: 15px;
+  transform: translateY(3px);
 }
-.container .top .date {
+.container .date {
   margin-bottom: 15px;
   font-size: 18px;
   font-weight: 600;
 }
-.container .top .icon {
+.container .icon {
   margin-bottom: 15px;
 }
-.container .top .icon img {
+.container .icon img {
   width: 70%;
   vertical-align: top;
 }
-.container .top .temp {
+.container .temp {
   font-size: 36px;
 }
-.container .top .temp h1 {
+.container .temp h1 {
   position: relative;
   width: fit-content;
   margin: 0 auto;
 }
-.container .top .temp h1:after {
+.container .temp h1:after {
   content: "°";
   position: absolute;
   top: 10px;
@@ -97,4 +103,16 @@ button {
   left: 0;
   padding-bottom: 50px;
   color: rgba(255, 255, 255, 0.5);
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
