@@ -51,7 +51,7 @@ function App() {
         }
         backGround();
         document.getElementById("1").style.backgroundImage = bg;
-        
+
         // function iconChange() {
         //   if (res.data.weather[0].id < 250) {
         //     return (document.getElementById("2").img="url('../images/sun.png')");
